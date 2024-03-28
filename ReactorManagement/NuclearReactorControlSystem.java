@@ -11,16 +11,15 @@
 public class NuclearReactorControlSystem {
 
     // References to other subsystems of the nuclear plant
-    private final String name;
     private final Reactor[] reactors;
     private float energyOutput; // how much cooling should be applied to the nuclear reactor
     private float coolingAmount;
 
     public NuclearReactorControlSystem(Reactor[] reactorsIn, String nameIn) {
         // Implement a contructor for the reactor where you:
+        //      create a list of 3 Reactors and add them to reactors
         //      set A DEFAULT OF 0 FOR: coolingAmount & energyOutput
-        //      use the constructor variables to set reactors & name
-        //      update all the reactor's cooling capability
+        //      update all the reactor's coolingAmount & energyOutput
 
         // TODO: Complete this section
 
@@ -45,7 +44,6 @@ public class NuclearReactorControlSystem {
     }
 
     public void DisplayReactors() {
-        System.out.println("Control System Name: " + name + "\n");
         for (Reactor reactorElement : reactors) {
             System.out.println("---" + reactorElement.getName() + "---\n" + "reactor output energy: " + reactorElement.getEnergyOutput()
                     + "\n reactor cooling amount: " + reactorElement.getCoolingAmount());
