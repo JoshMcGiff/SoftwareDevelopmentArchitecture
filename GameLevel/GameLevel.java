@@ -12,11 +12,7 @@ public class GameLevel {
     private Difficulty difficulty;
     private int amountOfEnemies = 5;
 
-    // GameLevel doesn't "know" anything about specific enemy types, thus making it more adaptable to different enemy types.
-    // Promotes OCP as for-loop never changes & instantiation code never changes
-    // - however, if one was to add a new enemy factory, that would have to be added
-    // Any ideas on how to avoid this?
-    // Dependency injection
+    
     public GameLevel(String enemyType) {
         // TODO: Create a variable called amountOfEnemies and set it = 5
         // TODO: If enemyType is "wizard" -> then add X enemies of type Wizard to the enemies list (where x = amountOfEnemies)
