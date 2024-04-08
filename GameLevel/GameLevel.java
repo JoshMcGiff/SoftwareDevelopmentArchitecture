@@ -9,20 +9,28 @@ import java.util.List;
 
 public class GameLevel {
     private List<Enemy> enemies = new ArrayList<>();
+    private Difficulty difficulty;
+    private int amountOfEnemies = 5;
 
-    public GameLevel(String levelType, Difficulty gameDifficulty) {
+    // GameLevel doesn't "know" anything about specific enemy types, thus making it more adaptable to different enemy types.
+    // Promotes OCP as for-loop never changes & instantiation code never changes
+    // - however, if one was to add a new enemy factory, that would have to be added
+    // Any ideas on how to avoid this?
+    // Dependency injection
+    public GameLevel(String enemyType) {
         // TODO: Create a variable called amountOfEnemies and set it = 5
-        // TODO: If levelType is "castle" -> then if Difficulty is EASY set difficulty = 3
-        //                              if Difficulty is HARD set difficulty = 10
-        //                              otherwise keep it as is.
-        //      then add X enemies of type Wizard to the enemies list (where x = amountOfEnemies)
-        // TODO: If levelType is "cave" -> then add X enemies of type Dragon to the enemies list (where x = amountOfEnemies)
+        // TODO: If enemyType is "wizard" -> then add X enemies of type Wizard to the enemies list (where x = amountOfEnemies)
+        // TODO: If levelType is "dragon" -> then add X enemies of type Dragon to the enemies list (where x = amountOfEnemies)
     }
 
     public void startLevel() {
-        enemies.forEach(enemy -> {
+        int index = 0;
+        for (Enemy enemy : enemies) {
+            System.out.println("Enemy " + (index + 1) + ":"); // Print index starting from 1
             enemy.speak();
             enemy.attack();
-        });
+            System.out.println();
+            index++;
+        }
     }
 }

@@ -6,12 +6,10 @@
 
 public class Main {
     public static void main(String[] args) {
-        GameLevel castleLevel = new GameLevel("castle", Difficulty.EASY);
+        GameLevel castleLevel = new GameLevel("wizard");
         castleLevel.startLevel();
 
-        GameLevel caveLevel = new GameLevel("cave", Difficulty.HARD);
+        GameLevel caveLevel = new GameLevel("knight");
         caveLevel.startLevel();
-
-         
     }
 }
