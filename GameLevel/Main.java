@@ -9,7 +9,7 @@ public class Main {
         GameLevel castleLevel = new GameLevel("wizard");
         castleLevel.startLevel();
 
-        GameLevel caveLevel = new GameLevel("knight");
+        GameLevel caveLevel = new GameLevel("dragon");
         caveLevel.startLevel();
     }
 }

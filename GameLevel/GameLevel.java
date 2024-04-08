@@ -12,7 +12,7 @@ public class GameLevel {
     private Difficulty difficulty;
     private int amountOfEnemies = 5;
 
-    
+
     public GameLevel(String enemyType) {
         // TODO: Create a variable called amountOfEnemies and set it = 5
         // TODO: If enemyType is "wizard" -> then add X enemies of type Wizard to the enemies list (where x = amountOfEnemies)
