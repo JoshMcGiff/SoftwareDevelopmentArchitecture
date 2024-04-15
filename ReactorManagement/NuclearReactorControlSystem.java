@@ -15,7 +15,7 @@ public class NuclearReactorControlSystem {
     private float energyOutput; // how much cooling should be applied to the nuclear reactor
     private float coolingAmount;
 
-    public NuclearReactorControlSystem(Reactor[] reactorsIn, String nameIn) {
+    public NuclearReactorControlSystem() {
         // Implement a contructor for the reactor where you:
         //      create a list of 3 Reactors and add them to reactors
         //      set A DEFAULT OF 0 FOR: coolingAmount & energyOutput
